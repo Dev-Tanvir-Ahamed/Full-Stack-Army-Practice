@@ -180,7 +180,8 @@ console.log(studentsObj);
 
 
 /**
- * 1. Easily Traverse
+ * 1. Easily Traverse (0(n))
+//  * 1.1 get anything if you have id/key
  * 2. Filter
  * 3. Delete (medium) O[1]
  * 4. Update (medium) (easy) O[1]
@@ -217,4 +218,24 @@ studentsObj[idUpdatedObj] = {
 
 console.log(studentsObj);
 
-deleted studentsObj[]
+// delete studentsObj[idUpdatedObj]
+console.log(studentsObj)
+
+
+
+// Travase
+for(let i in studentsObj){
+  console.log(studentsObj[i].email);
+}
+
+
+// Object.keys(studentsObj).forEach((v) => {
+//   const s = studentsObj[v]
+//   console.log(s.name, s.email)
+// })
+
+
+Object.values(studentsObj).forEach((v) => {
+  console.log(v.name, v.email);
+})
+
